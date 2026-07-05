@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Charis SIL", ui-serif, Georgia, serif;
+  
+  --color-brand-cream: #EAE7E0;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-light: #F5F4F0;
+  --color-brand-gold: #D4AF37;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-brand-cream);
+    color: var(--color-brand-dark);
+  }
+  body {
+    background-color: var(--color-brand-cream);
+  }
+}
+
+.gsap-reveal {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-text-anim, .reveal-section, .stagger-item, .reveal-item, .reveal-img {
+  will-change: transform, opacity;
+}
+
+.parallax-img {
+  will-change: transform;
+  transform: translateZ(0);
+}
